@@ -1,0 +1,14 @@
+<script>
+  window.onmessage = async (event) => {
+    if (event.data.pluginMessage.type === 'networkRequest') {
+      var request = new XMLHttpRequest()
+      // This link has random lorem ipsum text
+      request.open('GET', 'https://mars.nasa.gov/rss/api/?feed=weather&category=insight&feedtype=json&ver=1.0')
+      request.responseType = 'text'
+      request.onload = () => {
+        window.parent.postMessage({pluginMessage: request.response}, '*')
+      };
+      request.send()
+    }
+  }
+  </script>

@@ -1,0 +1,7 @@
+{
+  "name": "Mars Weather",
+  "id": "771103163077981072",
+  "api": "1.1.0",
+  "main": "code.js",
+  "ui": "ui.html"
+}
